@@ -22,6 +22,11 @@ public class Beer {
         return new Beer(name, tagline, abv);
     }
 
+    public PricedBeer withPrice(BigDecimal price) {
+        return PricedBeer.of(this.name, price);
+    }
+
+
     public String getName() {
         return name;
     }
